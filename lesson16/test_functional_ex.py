@@ -1,5 +1,6 @@
 from lesson15.len_example import Building,Company
 import pytest
+from lesson17 import ByTheWay
 
 
 @pytest.mark.smoke
