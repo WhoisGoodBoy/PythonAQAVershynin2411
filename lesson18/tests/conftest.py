@@ -1,4 +1,5 @@
-from selenium.webdriver import Chrome
+from selenium.webdriver import Chrome, Firefox
+from argparse import ArgumentParser
 import pytest
 from lesson18.pages.dashboard_page import DashBoard
 from lesson18.pages.category_page import Category
@@ -38,3 +39,25 @@ def category(driver, category_link='uk/semejnye-igry'):
 def product(driver):
     driver.get('https://nastolka.com.ua/uk/uzhas-arkhema-tretya-redakciya')
     yield Product(driver)
+
+@pytest.fixture
+def product2(driver2):
+    driver2.get('https://nastolka.com.ua/uk/uzhas-arkhema-tretya-redakciya')
+    yield Product(driver2)
+
+@pytest.fixture
+def driver2():
+    parser = ArgumentParser()
+    parser.add_argument('--driver', help='can be either Chrome or Firefox', default='Chrome')
+    arguments = parser.parse_args()
+    arguments_dict = arguments.__dict__
+    driver = None
+    if arguments_dict['driver'] == 'Chrome':
+        driver = Chrome()
+    elif arguments_dict['driver'] == 'Firefox':
+        driver = Firefox()
+    else:
+        raise Exception('wrong arg')
+    driver.maximize_window()
+    yield driver
+    driver.quit()
