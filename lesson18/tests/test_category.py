@@ -9,3 +9,7 @@ def test_go_to_first_element(dashboard):
     assert header.text == 'ЖАХ АРКХЕМУ. ТРЕТЯ РЕДАКЦІЯ (УКР.)'
     assert first_product_in_the_list.driver.current_url == 'https://nastolka.com.ua/uk/uzhas-arkhema-tretya-redakciya'
 
+def test_start_from_strategichny(category):
+    strategichny_category = category("uk/strategicheskie")
+    strategichny_category.click_on_first_element()
+    time.sleep(5)

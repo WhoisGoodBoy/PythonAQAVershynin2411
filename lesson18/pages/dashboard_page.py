@@ -3,6 +3,7 @@ from lesson18.pages.category_page import Category
 from lesson18.core.locators.dashboard_locator import DashBoardLocator
 from lesson18.core.CONSTANTS import list_of_logins
 import lesson18.pages.personal_cabinet_page
+from lesson18.pages.personal_cabinet_page import PersonalCabinet
 #try:
 #    from lesson18.pages.personal_cabinet_page import PersonalCabinet
 #except ImportError:
@@ -17,9 +18,9 @@ class DashBoard(BasePage):
     def click_on_catalogue(self):
         self.click_on_element(self.locator.locator_catalogue)
 
-    def click_on_family_category(self):
+    def click_on_category(self, category_title):
         self.click_on_catalogue()
-        self.click_on_element(self.locator.locator_for_family)
+        self.click_on_element(self.locator.return_parametrized_category_locator(category_title))
         return Category(self.driver)
 
     def open_login_form(self):
@@ -39,7 +40,6 @@ class DashBoard(BasePage):
         self.fill_email_field(list_of_logins[pair][0])
         self.fill_password_field(list_of_logins[pair][1])
         self.click_on_login_button()
-        from lesson18.pages.personal_cabinet_page import PersonalCabinet
         return PersonalCabinet(self.driver)
 
     def bypass_login2(self, login,password):
