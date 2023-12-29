@@ -5,6 +5,7 @@ from lesson18.pages.dashboard_page import DashBoard
 from lesson18.pages.category_page import Category
 from lesson18.pages.product_page import Product
 import random
+from lesson24.factory_example.browser_factory import BrowserFactory
 
 def get_random_value():
     return str(random.randint(100000,300000))
@@ -45,19 +46,14 @@ def product2(driver2):
     driver2.get('https://nastolka.com.ua/uk/uzhas-arkhema-tretya-redakciya')
     yield Product(driver2)
 
+@pytest.mark.parametrize(
+    'browser', ['chrome', 'firefox']
+)
 @pytest.fixture
-def driver2():
-    parser = ArgumentParser()
-    parser.add_argument('--driver', help='can be either Chrome or Firefox', default='Chrome')
-    arguments = parser.parse_args()
-    arguments_dict = arguments.__dict__
-    driver = None
-    if arguments_dict['driver'] == 'Chrome':
-        driver = Chrome()
-    elif arguments_dict['driver'] == 'Firefox':
-        driver = Firefox()
-    else:
-        raise Exception('wrong arg')
+def driver2(browser):
+    browser_factory = BrowserFactory()
+    current_browser = browser_factory.get_browser(browser)
+    driver = current_browser.driver
     driver.maximize_window()
     yield driver
     driver.quit()
