@@ -1,75 +1,43 @@
-<?xml version="1.0"?>
-<collection>
-    <genre category="Action">
-        <decade years="1980s">
-            <movie favorite="True" title="Indiana Jones: The raiders of the lost Ark">
-                <format multiple="No">DVD</format>
-                <year>1981</year>
-                <rating>PG</rating>
-                <description>
-                'Archaeologist and adventurer Indiana Jones
-                is hired by the U.S. government to find the Ark of the
-                Covenant before the Nazis.'
-                </description>
-            </movie>
-               <movie favorite="True" title="THE KARATE KID">
-               <format multiple="Yes">DVD,Online</format>
-               <year>1984</year>
-               <rating>PG</rating>
-               <description>None provided.</description>
-            </movie>
-            <movie favorite="False" title="Back 2 the Future">
-               <format multiple="False">Blu-ray</format>
-               <year>1985</year>
-               <rating>PG</rating>
-               <description>Marty McFly</description>
-            </movie>
-        </decade>
-        <decade years="1990s">
-            <movie favorite="False" title="X-Men">
-               <format multiple="Yes">dvd, digital</format>
-               <year>2000</year>
-               <rating>PG-13</rating>
-               <description>Two mutants come to a private academy for their kind whose resident superhero team must
-               oppose a terrorist organization with similar powers.</description>
-            </movie>
-            <movie favorite="True" title="Batman Returns">
-               <format multiple="No">VHS</format>
-               <year>1992</year>
-               <rating>PG13</rating>
-               <description>NA.</description>
-            </movie>
-               <movie favorite="False" title="Reservoir Dogs">
-               <format multiple="No">Online</format>
-               <year>1992</year>
-               <rating>R</rating>
-               <description>WhAtEvER I Want!!!?!</description>
-            </movie>
-        </decade>
-    </genre>
-
-    <genre category="Thriller">
-        <decade years="1970s">
-            <movie favorite="False" title="ALIEN">
-                <format multiple="Yes">DVD</format>
-                <year>1979</year>
-                <rating>R</rating>
-                <description>"""""""""</description>
-            </movie>
-        </decade>
-        <decade years="1980s">
-            <movie favorite="True" title="Ferris Bueller's Day Off">
-                <format multiple="No">DVD</format>
-                <year>1986</year>
-                <rating>PG13</rating>
-                <description>Funny movie about a funny guy</description>
-            </movie>
-            <movie favorite="FALSE" title="American Psycho">
-                <format multiple="No">blue-ray</format>
-                <year>2000</year>
-                <rating>Unrated</rating>
-                <description>psychopathic Bateman</description>
-            </movie>
-        </decade>
-    </genre>
-</collection>
+ <?xml version="1.0" encoding="UTF-8"?>
+<breakfast_menu>
+<food>
+    <name>Belgian Waffles</name>
+    <price>$5.95</price>
+    <description>
+   Two of our famous Belgian Waffles with plenty of real maple syrup
+   </description>
+    <calories>650</calories>
+</food>
+<food>
+    <name>Strawberry Belgian Waffles</name>
+    <price>$7.95</price>
+    <description>
+    Light Belgian waffles covered with strawberries and whipped cream
+    </description>
+    <calories>900</calories>
+</food>
+<food>
+    <name>Berry-Berry Belgian Waffles</name>
+    <price>$8.95</price>
+    <description>
+    Belgian waffles covered with assorted fresh berries and whipped cream
+    </description>
+    <calories>900</calories>
+</food>
+<food>
+    <name>French Toast</name>
+    <price>$4.50</price>
+    <description>
+    Thick slices made from our homemade sourdough bread
+    </description>
+    <calories>600</calories>
+</food>
+<food>
+    <name>Homestyle Breakfast</name>
+    <price>$6.95</price>
+    <description>
+    Two eggs, bacon or sausage, toast, and our ever-popular hash browns
+    </description>
+    <calories>950</calories>
+</food>
+</breakfast_menu> 

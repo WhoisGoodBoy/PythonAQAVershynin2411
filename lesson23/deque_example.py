@@ -1,0 +1,13 @@
+from collections import deque
+a = deque([1,4,6,8,'a', ('a', 'b')])
+a.append(5)
+a.appendleft('left')
+print(a)
+a.rotate(2)
+print(a)
+b = list(a)
+print(b)
+a.popleft()
+print(a)
+a.reverse()
+print(a)
