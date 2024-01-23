@@ -2,9 +2,9 @@ import psycopg2
 
 
 connection = psycopg2.connect(user='postgres',
-                              password='d2z76ctb',
+                              password='postgres',
                               host='localhost',
-                              port='5432',
+                              port='9999',
                               database='postgres'
                               )
 cursor = connection.cursor()

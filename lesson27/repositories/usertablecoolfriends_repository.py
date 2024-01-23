@@ -16,8 +16,8 @@ class UserRepository:
 
 
 users_repository = UserRepository()
-#user_to_add = UsersCoolFriends(id='CCCCCCCC', first_name='Gustavo', last_name='Frigman', age=52, email='gf@gmail.com')
-#users_repository.add_one_row(user_to_add)
+user_to_add = UsersCoolFriends(id='CCCCCCCC', first_name='Gustavo', last_name='Frigman', age=52, email='gf@gmail.com')
+users_repository.add_one_row(user_to_add)
 hello_its_me_gustavo = users_repository.get_by_user_id('CCCCCCCC')
 print(hello_its_me_gustavo)
 #print(users_repository.sess.query())
