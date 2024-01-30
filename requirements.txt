@@ -57,7 +57,6 @@ pytz==2023.3
 queuelib==1.6.2
 requests==2.31.0
 requests-file==1.5.1
-Scrapy==2.11.0
 scrapy-fake-useragent==1.4.4
 selenium==4.11.2
 service-identity==23.1.0
